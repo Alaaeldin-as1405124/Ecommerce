@@ -55,7 +55,7 @@ Check if docker-compose has been installed properly
 ## Clone the repo
 
 `by using git clone`
-
+`gh repo clone Alaaeldin-as1405124/Ecommerce`
 ## Navigate to the backend 
 if there's no package-lock.json
 
