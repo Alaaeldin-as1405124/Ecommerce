@@ -55,8 +55,14 @@ Check if docker-compose has been installed properly
 
 ## Clone the repo
 
-`by using git clone`
+by using git clone
+
+`git clone https://github.com/Alaaeldin-as1405124/Ecommerce.git`
+
+or by using gh cli
+
 `gh repo clone Alaaeldin-as1405124/Ecommerce`
+
 ## Navigate to the backend 
 if there's no package-lock.json
 
@@ -71,6 +77,10 @@ Why is that? Because in production we are running `npm ci` which depends on pack
 run
 
 `sudo docker-compose up`
+
+in case if you want to build the containers while running at the first time
+
+`sudo docker-compose up --build`
 
 To rebuild the images
 
