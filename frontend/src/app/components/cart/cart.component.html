@@ -1,0 +1,13 @@
+<mat-dialog-content class="dialog">
+  <div class="row wrap">
+    <h1 >My Cart ({{totalItems}}) Total Price: {{cart.total.toFixed(2)}}$</h1>
+    <div *ngIf="totalItems==0">
+      <p class="text-center h3 empty-text">No items in the cart</p>
+    </div>
+    <app-product-card *ngFor="let cartItem of cart.products;let i=index" [product]="cartItem.product" [cartItem]="true"
+                      [index]="i"
+                      class="col-lg-3 col-md-4 col-sm-12"></app-product-card>
+  </div>
+
+</mat-dialog-content>
+

@@ -1,0 +1,10 @@
+<div *ngFor="let rating of ratings" class="card mt-2 mb-2">
+  <div class="row no-gutter p-2 m-2">
+    <p class="col-lg-8 col-sm-4">{{rating?.comment}}</p>
+    <div class="col-lg-4 col-sm-8">
+      <app-stars [stars]="rating?.stars"></app-stars>
+
+    </div>
+  </div>
+
+</div>

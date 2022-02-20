@@ -1,0 +1,21 @@
+<mat-toolbar class="mat-toolbar-row" color="secondary">
+  <div class="container">
+    <mat-toolbar-row>
+      <span class="d-none d-md-block">Ecommerce</span>
+      <div class="p-5">
+        <a routerLink="/" routerLinkActive="active" class="pointer">Products</a>
+      </div>
+      <div class="col text-end">
+        <p class="mt-2">
+          <a (click)="openCartDialog()" class="btn btn-custom btn-lg">
+            <mat-icon style="vertical-align: middle;">shopping_cart</mat-icon> My Cart ({{itemsCount}})
+          </a>
+        </p>
+      </div>
+
+
+    </mat-toolbar-row>
+
+  </div>
+
+</mat-toolbar>

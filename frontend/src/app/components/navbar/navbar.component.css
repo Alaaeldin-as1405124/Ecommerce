@@ -1,0 +1,38 @@
+.toolbar {
+  background: aliceblue;
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+
+}
+
+.logo {
+  width: 150px;
+  padding: 5px;
+}
+
+nav {
+  display: inline-block;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+}
+
+li {
+  padding: 0 0 20px 20px;
+  display: inline;
+
+}
+
+a {
+  text-decoration: none;
+}
+
+

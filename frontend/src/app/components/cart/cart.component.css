@@ -1,0 +1,8 @@
+.dialog {
+  min-height: 80vh;
+  min-width: 80vw;
+}
+
+.empty-text{
+  line-height: 40rem !important;
+}

@@ -1,0 +1,5 @@
+<div class="row align-items-center">
+  <mat-icon *ngFor="let n of numSequence(5);let i=index;"
+            [ngStyle]="{'color': stars <= i ? 'gray':'gold'}">{{getIconName(stars, i)}}</mat-icon>
+  <span class="col"> {{stars}}/5 </span>
+</div>

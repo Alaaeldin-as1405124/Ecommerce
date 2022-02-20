@@ -1,0 +1,13 @@
+<div class="row wrap">
+  <h1 class="p-3 m-3">Featured Products</h1>
+
+
+  <div [hidden]="!loading" style="min-height: 80vh;">
+    <div class="dot"></div>
+  </div>
+
+
+  <app-product-card *ngFor="let product of products" [product]="product"
+                    class="col-lg-3 col-md-4 col-sm-12"></app-product-card>
+</div>
+
