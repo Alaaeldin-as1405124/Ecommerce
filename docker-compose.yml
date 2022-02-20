@@ -1,0 +1,40 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:12
+    restart: always
+    environment:
+      - POSTGRES_USER=dbUser
+      - POSTGRES_PASSWORD=dbPassword
+      - POSTGRES_DB=intouch
+    ports:
+      - '5432:5432'
+    expose:
+      - 5432
+    volumes:
+      - db:/postgress/data
+  api:
+    container_name: backend
+    build:
+      context: ./backend
+    depends_on:
+      - db
+    ports:
+      - '5005:5005'
+    environment:
+      NODE_ENV: production
+      POSTGRES_USER: dbUser
+      POSTGRES_PASSWORD: dbPassword
+      POSTGRES_DB: intouch
+  frontend:
+    container_name: frontend
+    build:
+      context: ./frontend
+    links:
+      - api
+    ports:
+      - '80:80'
+
+volumes:
+  db:
+    driver: local
