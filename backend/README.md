@@ -1,14 +1,14 @@
 # Backend
 
 
-#Diagrams
-##Communication Diagram
+# Diagrams
+## Communication Diagram
 ![Alt text](./github-assets/communication.png?raw=true "Optional Title")
 
-##ER Diagram
+## ER Diagram
 ![Alt text](./github-assets/ERD.png?raw=true "Optional Title")
 
-##Exposed Routes
+## Exposed Routes
 
 ### `~/api/products` returns all the products
 ### `~/api/products/:id` returns single product by it's id
@@ -33,13 +33,13 @@ In the root folder there are 6 main directories
 7. __test\__ (The automated test cases using __Jest__)
 
 # Root
-###ormconnection.ts
+### ormconnection.ts
 Responsible for connecting to the database
-###ormconfig.ts
+### ormconfig.ts
 It has the orm config, that are defined in the .env file
-###Dockerfile
+### Dockerfile
 It has the docker configurations.
-###.env.template
+### .env.example
 .env template for the env parameters
 
 
@@ -51,12 +51,12 @@ It has the typeorm migration files, that can be generated using
 
 ## 3. Entities
 
-Entities has 2 main files, or we can call them models.
+Entities directory has 2 main files, or we can call them models.
 
-###product.ts
+### product.ts
 Product Model that has the product schema defined, with the relationship of the review entity
 
-###review.ts
+### review.ts
 Review Model that has the relationship with the product model, as many-to-one. So, each product can have one or many reviews.
 
 
@@ -68,11 +68,11 @@ product.repo.ts is responsible to do the crud operation, it has 2 main methods/f
 ## 5. Services
 Services are usually responsible to get the request, and verify that the user is authorized to do the requested action. Then it asks the repository to provide the neccessary data.
 
-###product.service.ts
-product.service.ts is being used by the router, and once it gets a request it sends the neccesary data to the repo, then returns the proper response with status code.
+### product.service.ts
+product.service.ts is being used by the router, and once it gets a request it sends the necessary data to the repo, then returns the proper response with status code.
 
 ## 6. Routes
-Routes are usually the routes that are exposed to public to use the api.
+Routes are usually the routes that are exposed to the public to use the api.
 
 
 ## 7. Tests
