@@ -22,7 +22,16 @@ Run `npm run test` or `ng test to execute the unit tests via [Karma](https://kar
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-#Screenshots
+# Demo
+
+
+# What is included?
+- Simple design UI
+- Products page (displays all the products)
+- Product details page
+- Cart, which is being saved in case the browser is closed
+
+# Screenshots
 ![Alt text](./github-assets/product.png?raw=true "Optional Title")
 ![Alt text](./github-assets/product.png?raw=true "Optional Title")
 ![Alt text](./github-assets/cart.png?raw=true "Optional Title")
@@ -36,41 +45,41 @@ In "src/app" folder there are 3 main directories
 
 # 1. components
 
-###cart
+### cart
 Responsible to render the customer cart, displays the total number of products in the cart, total price of all cart items, as well as the products cards information. It is being used in the dialog popup which is accessible from the navbar button.
-###footer
+### footer
 The main app footer
-###navbar
+## #navbar
 The main app navbar, that have 1 route called products, that navigates to "product" component, as well as the cart button
-###product
+### product
 Single product details page, it renders the product details, and communicating with product service to get the product details from the api by the product id.
-###product-card
+### product-card
 Product card component is responsible to render single product card, and it is made generic to be re-useable in cart component as wel as the products component, it accepts products in the navigation params, and renders its details.
-###products 
+### products 
 The main page that displays all the products, and it uses product card to render each product that is coming from products service after communicating with the api.
-###ratings 
+### ratings 
 It accepts ratings array, and render each rating along with its comment, and it uses stars component to render the stars
-###stars
+### stars
 It accepts a rate, and it renders 5 stars, and decides to render a full star or half star based on the given rate.
 
 # 2. Models
 
-###Product
+### Product
 Product Model that has the product schema defined in the interface
 
-###Cart
+### Cart
 Cart Model that has product model as an array, along with the amount of each product which has been added to the cart.
 
 
 # 3. Services
 
-###Cart Service
+### Cart Service
 Cart service is responsible for the card CRUD operations, and it uses localstorage to save the cart in case if the browser is closed.
 
-###Product Service
+### Product Service
 Product service is responsible for the communication of the api, so it can fetch all products, or single product details. Also, it has a method that calculates to average star reviews for a single product.
 
-###Toast Service
+### Toast Service
 Toast service is responsible to display toast in the app, to notify the user for some actions. For example, when a product is added/removed from/to the cart
 
 

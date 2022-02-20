@@ -7,19 +7,20 @@ In the root folder there are 2 main directories
 1. frontend (Has the angular code, along with its documentation)
 2. backend (Has the nodejs code along with its documentation)
 3. postgress (Has the docker volume/disk for postgress)
-#Docker diagram
+
+# Docker diagram
 
 ![Alt text](./github-assets/docker.png?raw=true "Optional Title")
 
-###db: is using postgress:12 image to create the database
-###frontend: containerized with nginx running at port 80, with reverse proxy configurations to allow the api to be accessed via www.domain.com/api without exposing the api port
-###backend: running nodejs code on port 5005
+### db: is using postgress:12 image to create the database
+### frontend: containerized with nginx running at port 80, with reverse proxy configurations to allow the api to be accessed via www.domain.com/api without exposing the api port
+### backend: running nodejs code on port 5005
 
-#Deployment guide
+# Deployment guide
 
 `We will be using docker-compose to deploy the app, and use reverse proxy to be able to use the same domain/api to access the api without exposing the api port to the public.`
 
-##Prerequisites
+## Prerequisites
 `This deployment guide will be on a linux server, however it can be tweaked a bit to work in any os, because it uses docker.`
 
 ## Install docker & docker compose
@@ -50,7 +51,7 @@ Check if docker-compose has been installed properly
 
 `docker-compose --version`
 
-#Guide
+# Guide
 
 ## Clone the repo
 
@@ -75,10 +76,10 @@ To rebuild the images
 
 `sudo docker-compose build`
 
-###NOTE
+## #NOTE
 Change your .env variables, and files to suit your requirements.
 
 
-#Demo
+# Demo
 https://ecommerce.ay-legend.com
 
